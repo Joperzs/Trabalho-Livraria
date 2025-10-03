@@ -106,7 +106,7 @@ class BookstoreService:
             self.logger.error(f"Erro na exportação: {e}")
             return False, f"Erro ao exportar: {str(e)}"
     
-    def import_from_csv(self, filename="books_import.csv"):
+    def import_from_csv(self, filename="books.csv"):
         try:
             result = self.csv_service.import_from_csv(filename)
             

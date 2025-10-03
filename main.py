@@ -115,9 +115,9 @@ def main():
             elif choice == 8:
                 ui.print_header("IMPORTAR DE CSV")
                 
-                filename = input("Nome do arquivo (padrão: books_import.csv): ").strip()
+                filename = input("Nome do arquivo (padrão: books.csv): ").strip()
                 if not filename:
-                    filename = "books_import.csv"
+                    filename = "books.csv"
                 
                 try:
                     success, message, stats = bookstore.import_from_csv(filename)

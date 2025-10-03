@@ -5,17 +5,6 @@ from datetime import datetime
 Base = declarative_base()
 
 class Book(Base):
-    """
-    Modelo de dados para representar um livro no sistema.
-    
-    Attributes:
-        id: Identificador único do livro (chave primária)
-        title: Título do livro
-        author: Nome do autor
-        publication_year: Ano de publicação
-        price: Preço do livro
-        created_at: Data e hora de cadastro no sistema
-    """
     __tablename__ = 'books'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -29,7 +18,6 @@ class Book(Base):
         return f"<Book(id={self.id}, title='{self.title}', author='{self.author}')>"
     
     def to_dict(self):
-        """Converte o objeto Book em um dicionário."""
         return {
             'id': self.id,
             'title': self.title,
